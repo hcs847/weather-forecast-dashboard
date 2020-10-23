@@ -1,0 +1,533 @@
+:root {
+    --primary: rgb(229, 232, 242);
+    --secondary: rgb(203, 204, 204);
+    --light-grey: #bec0c0;
+    --blue: rgb(41, 114, 179);
+    --light-blue: rgb(157, 201, 232);
+    --dark: rgb(40, 46, 52);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary);
+    margin: 0;
+    padding: 0;
+    font-family: "IBM Plex Sans", sans-serif;
+    color: var(--dark);
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    margin: 0;
+    color: var(--primary);
+    line-height: 1.25;
+}
+
+main {
+    margin: 20px auto;
+    width: 94%;
+}
+
+
+/* CARDS */
+.card {
+    margin: 0 0 20px 0;
+
+
+}
+
+.card-header {
+    color: var(--dark);
+    padding: 1.5%;
+    display: flex;
+}
+
+.search-city {
+    margin: 1rem 0 0.3rem 1.2rem;
+    font-weight: 550;
+    color: var(--blue);
+}
+
+
+.card-body {
+    padding: 0 1.5%;
+    margin-bottom: 0;
+
+}
+
+.daily-forecast {
+    background-color: var(--blue);
+    margin-top: 2rem;
+    border-radius: 0.3rem;
+}
+
+.humidity {
+    padding-bottom: 1rem;
+}
+
+.daily-forecast h3 {
+    color: whitesmoke;
+    padding: 0.8rem 0 0 1.3rem;
+}
+
+.daily-forecast p {
+    color: whitesmoke;
+    padding-left: 1.5rem;
+}
+
+.daily-forecast img {
+    margin-left: 2rem;
+}
+
+.card p {
+    font-size: 0.8rem;
+    color: white;
+}
+
+#previous-cities {
+    padding: 0 0 0 2rem;
+    ;
+}
+
+#previous-cities p {
+    background-color: white;
+    border: solid 0.01rem var(--light-grey);
+    color: var(--blue);
+    width: 80%;
+    padding: 2%;
+    margin: 0;
+    font-size: 0.8rem;
+    line-height: 2;
+}
+
+
+.uv {
+    line-height: 0.6;
+    padding: 0.1rem 0 1rem 1rem;
+    margin: 0;
+}
+
+.uv p span {
+    border-radius: 0.3rem;
+    padding: 0.5%;
+    font-weight: 650;
+}
+
+.green {
+    background-color: rgb(86, 153, 86);
+    color: white;
+}
+
+.yellow {
+    background-color: rgb(245, 245, 6);
+    color: darkslateblue;
+}
+
+.orange {
+    background-color: rgb(235, 158, 15);
+    color: darkolivegreen;
+}
+
+.red {
+    background-color: rgb(212, 7, 7);
+    color: white;
+}
+
+.purple {
+    background-color: rgb(100, 4, 100);
+    color: white;
+}
+
+#sidebar {
+    background-color: var(--secondary);
+}
+
+#todays-weather,
+.todays-weather p {
+    color: var(--blue);
+    font-weight: 500;
+    background-color: white;
+}
+
+#todays-weather h2 {
+    color: var(--blue);
+    display: inline-block;
+    line-height: 3rem;
+}
+
+#todays-weather img {
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+}
+
+
+.hero {
+    padding: 1% 2%;
+    background-color: var(--dark);
+    color: var(--primary);
+}
+
+.hero p {
+    max-width: 75%;
+}
+
+.main-title {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.btn {
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0.2rem;
+    margin-left: 0.3rem;
+    width: 10%;
+    display: inline-block;
+    border-radius: 0.3rem;
+    color: white;
+    border: none;
+    outline: none;
+    background-color: var(--blue);
+    box-shadow: 3px 3px var(--light-blue);
+    transform: translate(-1px, -1px);
+}
+
+
+/* Flex Display */
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.justify-space-around {
+    justify-content: space-around;
+}
+
+.justify-flex-start {
+    justify-content: flex-start
+}
+
+.justify-flex-end {
+    justify-content: flex-end;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-stretch {
+    align-items: stretch;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.col-auto {
+    flex-grow: 1;
+}
+
+.col-1 {
+    flex: 0 0 calc(100% * 1 / 12 - 2%);
+}
+
+.col-2 {
+    flex: 0 0 calc(100% * 2 / 12 - 0.5%);
+}
+
+.col-3 {
+    flex: 0 0 calc(100% * 3 / 12 - 2%);
+}
+
+.col-4 {
+    flex: 0 0 calc(100% * 4 / 12 - 2%);
+}
+
+.col-5 {
+    flex: 0 0 calc(100% * 5 / 12 - 2%);
+}
+
+.col-6 {
+    flex: 0 0 calc(100% * 6 / 12 - 2%);
+}
+
+.col-7 {
+    flex: 0 0 calc(100% * 7 / 12 - 2%);
+}
+
+.col-8 {
+    flex: 0 0 calc(100% * 8 / 12 - 2%);
+}
+
+.col-9 {
+    flex: 0 0 calc(100% * 9 / 12 - 2%);
+}
+
+.col-10 {
+    flex: 0 0 calc(100% * 10 / 12 - 2%);
+}
+
+.col-11 {
+    flex: 0 0 calc(100% * 11 / 12 - 2%);
+}
+
+.col-12 {
+    flex: 0 0 100%;
+}
+
+
+/* Forms */
+.form-label,
+.form-input,
+.form-textarea {
+    display: inline-block;
+}
+
+#city {
+    border: var(--light-grey);
+}
+
+.form-label {
+    font-size: 1.1rem;
+    margin: 0 0 0 5px;
+}
+
+.form-input {
+    width: 65%;
+    height: 75%;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.2rem;
+    margin-bottom: 1rem;
+
+}
+
+
+/* col-sm */
+@media screen and (min-width: 640px) {
+    .col-sm-1 {
+        flex: 0 0 calc(100% * 1 / 12 - 2%);
+    }
+
+    .col-sm-2 {
+        flex: 0 0 calc(100% * 2 / 12 - 2%);
+    }
+
+    .col-sm-3 {
+        flex: 0 0 calc(100% * 3 / 12 - 2%);
+    }
+
+    .col-sm-4 {
+        flex: 0 0 calc(100% * 4 / 12 - 2%);
+    }
+
+    .col-sm-5 {
+        flex: 0 0 calc(100% * 5 / 12 - 2%);
+    }
+
+    .col-sm-6 {
+        flex: 0 0 calc(100% * 6 / 12 - 2%);
+    }
+
+    .col-sm-7 {
+        flex: 0 0 calc(100% * 7 / 12 - 2%);
+    }
+
+    .col-sm-8 {
+        flex: 0 0 calc(100% * 8 / 12 - 2%);
+    }
+
+    .col-sm-9 {
+        flex: 0 0 calc(100% * 9 / 12 - 2%);
+    }
+
+    .col-sm-10 {
+        flex: 0 0 calc(100% * 10 / 12 - 2%);
+    }
+
+    .col-sm-11 {
+        flex: 0 0 calc(100% * 11 / 12 - 2%);
+    }
+
+    .col-sm-12 {
+        flex: 0 0 100%;
+    }
+}
+
+
+/* col-md */
+@media screen and (min-width: 768px) {
+    .col-md-1 {
+        flex: 0 0 calc(100% * 1 / 12 - 2%);
+    }
+
+    .col-md-2 {
+        flex: 0 0 calc(100% * 2 / 12 - 2%);
+    }
+
+    .col-md-3 {
+        flex: 0 0 calc(100% * 3 / 12 - 2%);
+    }
+
+    .col-md-4 {
+        flex: 0 0 calc(100% * 4 / 12 - 2%);
+    }
+
+    .col-md-5 {
+        flex: 0 0 calc(100% * 5 / 12 - 2%);
+    }
+
+    .col-md-6 {
+        flex: 0 0 calc(100% * 6 / 12 - 2%);
+    }
+
+    .col-md-7 {
+        flex: 0 0 calc(100% * 7 / 12 - 2%);
+    }
+
+    .col-md-8 {
+        flex: 0 0 calc(100% * 8 / 12 - 2%);
+    }
+
+    .col-md-9 {
+        flex: 0 0 calc(100% * 9 / 12 - 2%);
+    }
+
+    .col-md-10 {
+        flex: 0 0 calc(100% * 10 / 12 - 2%);
+    }
+
+    .col-md-11 {
+        flex: 0 0 calc(100% * 11 / 12 - 2%);
+    }
+
+    .col-md-12 {
+        flex: 0 0 100%;
+    }
+}
+
+/* col-lg */
+@media screen and (min-width: 992px) {
+    .col-lg-1 {
+        flex: 0 0 calc(100% * 1 / 12 - 2%);
+    }
+
+    .col-lg-2 {
+        flex: 0 0 calc(100% * 2 / 12 - 2%);
+    }
+
+    .col-lg-3 {
+        flex: 0 0 calc(100% * 3 / 12 - 2%);
+    }
+
+    .col-lg-4 {
+        flex: 0 0 calc(100% * 4 / 12 - 2%);
+    }
+
+    .col-lg-5 {
+        flex: 0 0 calc(100% * 5 / 12 - 2%);
+    }
+
+    .col-lg-6 {
+        flex: 0 0 calc(100% * 6 / 12 - 2%);
+    }
+
+    .col-lg-7 {
+        flex: 0 0 calc(100% * 7 / 12 - 2%);
+    }
+
+    .col-lg-8 {
+        flex: 0 0 calc(100% * 8 / 12 - 2%);
+    }
+
+    .col-lg-9 {
+        flex: 0 0 calc(100% * 9 / 12 - 2%);
+    }
+
+    .col-lg-10 {
+        flex: 0 0 calc(100% * 10 / 12 - 2%);
+    }
+
+    .col-lg-11 {
+        flex: 0 0 calc(100% * 11 / 12 - 2%);
+    }
+
+    .col-lg-12 {
+        flex: 0 0 100%;
+    }
+}
+
+/* col-xl */
+@media screen and (min-width: 1200px) {
+    .col-xl-1 {
+        flex: 0 0 calc(100% * 1 / 12 - 2%);
+    }
+
+    .col-xl-2 {
+        flex: 0 0 calc(100% * 2 / 12 - 2%);
+    }
+
+    .col-xl-3 {
+        flex: 0 0 calc(100% * 3 / 12 - 2%);
+    }
+
+    .col-xl-4 {
+        flex: 0 0 calc(100% * 4 / 12 - 2%);
+    }
+
+    .col-xl-5 {
+        flex: 0 0 calc(100% * 5 / 12 - 2%);
+    }
+
+    .col-xl-6 {
+        flex: 0 0 calc(100% * 6 / 12 - 2%);
+    }
+
+    .col-xl-7 {
+        flex: 0 0 calc(100% * 7 / 12 - 2%);
+    }
+
+    .col-xl-8 {
+        flex: 0 0 calc(100% * 8 / 12 - 2%);
+    }
+
+    .col-xl-9 {
+        flex: 0 0 calc(100% * 9 / 12 - 2%);
+    }
+
+    .col-xl-10 {
+        flex: 0 0 calc(100% * 10 / 12 - 2%);
+    }
+
+    .col-xl-11 {
+        flex: 0 0 calc(100% * 11 / 12 - 2%);
+    }
+
+    .col-xl-12 {
+        flex: 0 0 100%;
+    }
+}

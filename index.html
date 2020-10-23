@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <header class="hero">
+        <h1 class="main-title">Weather Dashboard</h1>
+
+    </header>
+    <main class="flex-row justify-space-between">
+        <div id="sidebar" class="col-12 col-md-3">
+            <div class="card search-city">
+                <h3 class="card-header search-city">Search for a City:</h3>
+                <form id="user-form" class="card-body">
+                    <label class="form-label" for="city"></label>
+                    <input name="city" id="city" type="text" autofocus="true" class="form-input" />
+                    <button type="submit" class="btn"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div class="card">
+                <div id="previous-cities" class="card-body">
+
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-9">
+            <div id="todays-weather" class="card todays-weather">
+
+            </div>
+            <div class="flex-row justify-space-between">
+                <div class="col-2 col-sml-2">
+                    <div id="day1" class="card daily-forecast">
+
+                    </div>
+                </div>
+                <div class="col-2 col-sml-2">
+                    <div id="day2" class="card daily-forecast">
+
+                    </div>
+                </div>
+                <div class="col-2 col-sml-2">
+                    <div id="day3" class="card daily-forecast">
+
+                    </div>
+                </div>
+                <div class="col-2 col-sml-2">
+                    <div id="day4" class="card daily-forecast">
+
+                    </div>
+                </div>
+                <div class="col-2 col-sml-2">
+                    <div id="day5" class="card daily-forecast">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script type='text/javascript' src="config.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>
