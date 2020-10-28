@@ -8,7 +8,7 @@ var myKey = config.WeatherKey;
 
 // fecthing from the current weather api based on city
 var getTodaysWeather = function (city) {
-    var currentApiUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + myKey;
+    var currentApiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + myKey;
     fetch(currentApiUrl).then(function (response) {
         if (response.ok) {
             response.json().then(function (data) {
@@ -51,7 +51,7 @@ var displayTodaysWeather = function (data) {
     //rendering on page
     cityNameEl.classList = "card-header";
     cityNameEl.innerHTML = "<h2>" + city + " " + moment().format("MM/DD/YYYY") +
-        "</h2> <img src='http://openweathermap.org/img/wn/" + icon + "@2x.png'></img>";
+        "</h2> <img src='https://openweathermap.org/img/wn/" + icon + "@2x.png'></img>";
     cityTodayEl.appendChild(cityNameEl);
     cityConditionsEl.classList = "card-body";
     cityConditionsEl.innerHTML = "<p>Temperature: " + temp + " °F</p><p>Humidity: " +
@@ -73,7 +73,7 @@ var displayForecast = function (fiveDaysForecast, forecastData) {
         var dayEl = document.querySelector("#day" + i);
         dayEl.innerHTML = "<h3 class = 'card-header'>" +
             fiveDaysForecast[i - 1].date +
-            "</h3><img src='http://openweathermap.org/img/wn/" +
+            "</h3><img src='https://openweathermap.org/img/wn/" +
             fiveDaysForecast[i - 1].icon + "@2x.png'></img><p class='temp'>Temp: " +
             fiveDaysForecast[i - 1].temp + " °F</p><p class='humidity'>Humidity: " +
             fiveDaysForecast[i - 1].humid + "%</p>";
