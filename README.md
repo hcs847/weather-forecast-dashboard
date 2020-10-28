@@ -8,6 +8,4 @@ Users can search for cities to display current weather including the UV index wh
 
 The last 10 cities searched will be displayed under the search box and related weather information can be displayed by clicking on these previously searched cities.
 
-In order to fully render the page, an API key is required and is not attached in GitHub, please use your own API key to take advantage of this tool.
-
 ![](dashboard.png)
