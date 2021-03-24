@@ -8,6 +8,6 @@ Users can search for cities to display current weather including the UV index wh
 
 The last 10 cities searched will be displayed under the search box and related weather information can be displayed by clicking on these previously searched cities.
 
-### URL: https://hcs847.github.io/weather-forecast-dashboard/
+### [Go to Weather Dashboard](https://weather-dashboard-hc.netlify.app/)
 
 ![](dashboard.png)
