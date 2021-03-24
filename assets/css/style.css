@@ -1,10 +1,10 @@
 :root {
   --primary: rgb(229, 232, 242);
   --secondary: rgb(203, 204, 204);
-  --light-grey: #bec0c0;
-  --blue: steelblue;
-  --light-blue: lightblue;
-  --dark: darkslategray;
+  --mid-blue: rgb(85, 106, 131);
+  --sun: rgb(184,133,82);
+  --light-yellow: rgb(211,195,150);
+  --dark: rgb(23,35,69);
 }
 
 * {
@@ -12,7 +12,10 @@
 }
 
 body {
-  background-image: url("../../clouds.png");
+  background-image: url("../../clouds.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-origin: center;
   margin: 0;
   padding: 0;
   font-family: "IBM Plex Sans", sans-serif;
@@ -29,7 +32,7 @@ h5,
 h6 {
   font-weight: 700;
   margin: 0;
-  color: var(--primary);
+  color: var(--mid-blue);
   line-height: 1.25;
 }
 
@@ -41,6 +44,7 @@ main {
 /* CARDS */
 .card {
   margin: 0 0 20px 0;
+  border-radius: 0.5rem;
 }
 
 .card-header {
@@ -52,16 +56,17 @@ main {
 .search-city {
   margin: 1rem 0 0.3rem 1.2rem;
   font-weight: 550;
-  color: var(--darkslategray);
+  color: var(--light-yellow);
 }
 
 .card-body {
   padding: 0 1.5%;
   margin-bottom: 0;
+  
 }
 
 .daily-forecast {
-  background-color: var(--blue);
+  background-color: var(--mid-blue);
   margin-top: 2rem;
   border-radius: 0.3rem;
 }
@@ -86,14 +91,25 @@ main {
 
 .card p {
   font-size: 0.8rem;
-  color: white;
+  /* color: white; */
 }
 
 #previous-cities {
   padding: 0 0 0 2rem;
+  border-radius: 0.5rem;
+}
+
+#previous-cities p:nth-child(1) {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+#previous-cities p:last-child {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 #previous-cities p {
+  cursor: pointer;
   background-color: white;
   border: solid 0.01rem var(--light-grey);
   color: var(--darkslategray);
@@ -147,13 +163,16 @@ main {
 
 #todays-weather,
 .todays-weather p {
-  color: var(--blue);
+  /* color: var(--sun); */
   font-weight: 500;
-  background-color: white;
+  
+}
+#todays-weather {
+  background-color: rgba(255,255,255,0.9);
 }
 
 #todays-weather h2 {
-  color: var(--blue);
+  /* color: var(--sun); */
   display: inline-block;
   line-height: 3rem;
 }
@@ -166,8 +185,8 @@ main {
 
 .hero {
   padding: 1% 2%;
-  background-color: var(--dark);
-  color: var(--primary);
+  background-color: var(--sun);
+  color: var(--dark);
 }
 
 .hero p {
@@ -177,6 +196,7 @@ main {
 .main-title {
   font-size: 3rem;
   text-align: center;
+  color: var(--dark);
 }
 
 .btn {
@@ -190,8 +210,8 @@ main {
   color: white;
   border: none;
   outline: none;
-  background-color: var(--blue);
-  box-shadow: 3px 3px var(--light-blue);
+  background-color: var(--sun);
+  box-shadow: 3px 3px var(--light-yellow);
   transform: translate(-1px, -1px);
 }
 
@@ -296,6 +316,7 @@ main {
 .form-input,
 .form-textarea {
   display: inline-block;
+  border-radius: 0.3rem;
 }
 
 #city {
@@ -402,6 +423,7 @@ main {
 
   .col-md-9 {
     flex: 0 0 calc(100% * 9 / 12 - 2%);
+    margin-top: 3vh;
   }
 
   .col-md-10 {
